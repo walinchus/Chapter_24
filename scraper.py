@@ -14,12 +14,13 @@ print "After converting to xml it has %d bytes" % len(xmldata)
 root = lxml.etree.fromstring(xmldata)
 
 # this line uses xpath to find <text> tags
-lines = root.findall('.//text[@font="3"]//b')
+lines = root.findall('.//text[@font="5"]//b')
 print lines
 for line in lines:
  print line.text
 
 record = {}
 for line in lines:
+  if len(line.text)>4
   record["date"] = line.text
   scraperwiki.sqlite.save(['date'], record)
