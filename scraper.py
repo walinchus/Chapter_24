@@ -21,6 +21,10 @@ for line in lines:
 
 record = {}
 for line in lines:
+ if len(line.text)<5:
+  code = line.text
+  print record
+  record["code"] = line.text
   if len(line.text)>4
   record["locations"] = line.text
   scraperwiki.sqlite.save(['locations'], record)
