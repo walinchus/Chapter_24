@@ -22,5 +22,5 @@ for line in lines:
 record = {}
 for line in lines:
   if len(line.text)>4
-  record["date"] = line.text
-  scraperwiki.sqlite.save(['date'], record)
+  record["locations"] = line.text
+  scraperwiki.sqlite.save(['locations'], record)
