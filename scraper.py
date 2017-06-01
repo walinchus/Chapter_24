@@ -16,7 +16,7 @@ root = lxml.etree.fromstring(xmldata)
 # this line uses xpath to find <text> tags
 lines = root.findall('.//text[@font="3"]//b')
 print lines
- for line in lines:
+for line in lines:
  print line.text
 
 record = {}
